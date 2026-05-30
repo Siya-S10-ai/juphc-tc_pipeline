@@ -9,6 +9,8 @@ spec:
   params:
     - name: build-image
     - name: repo-url
+    - name: app-name
+      default: "tax-calculator"
     - name: branch
       default: main
   tasks:
@@ -64,4 +66,3 @@ spec:
         value: "us.icr.io/$(context.pipelineRun.namespace)/$(params.app-name)"
       runAfter:
         - tests
-        
